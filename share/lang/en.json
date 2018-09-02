@@ -20,8 +20,7 @@
       "settings": "Settings",
       "reload": "Reload overlay",
       "fullscreen": "Toggle fullscreen",
-      "screenshot": "Take screenshot",
-      "donate": "Donate"
+      "screenshot": "Take screenshot"
     },
     "config": {
       "_": "Settings",
@@ -226,19 +225,19 @@
       "_": "DPS",
       "per_second": ["DPS", "per Second"],
       "pct": ["D%", "Deal %"],
-      "total": ["D.Tot", "Total"],
-      "failure": ["Fail", "Failure (Miss / Swing)"],
-      "accuracy": ["Acc.", "Accuracy (1 - Miss / Swing)"],
-      "swing": ["Hit", "Hits"],
-      "miss": ["Miss", "Misses"],
-      "hitfail": ["HitF", "Hitfail"],
+      "total": ["D", "Total"],
+      "failure": ["F", "Failure (Miss / Swing)"],
+      "accuracy": ["A", "Accuracy (1 - Miss / Swing)"],
+      "swing": ["H", "Hits"],
+      "miss": ["M", "Misses"],
+      "hitfail": ["HF", "Hitfail"],
       "critical": ["CH", "Critical Hit%"],
       "direct": ["DH", "Direct Hit%"],
-      "crit_direct": ["!!!", "Critical Direct Hit% (!!!)"],
+      "crit_direct": ["!!", "Critical Direct Hit% (!!!)"],
       "crittypes": ["D/!/!!!", "Direct/Critical/!!! Count"],
-      "max": ["MaxD", "Maxhit (w/o skillname)"],
+      "max": ["MaxH", "Maxhit (w/o skillname)"],
       "maxskill": ["MaxDS", "Maxhit (skillname only)"],
-      "maxhit": ["MaxDamage", "Maxhit"],
+      "maxhit": ["Max", "Maxhit"],
       "last10": ["10s", "DPS for Last 10s"],
       "last30": ["30s", "DPS for Last 30s"],
       "last60": ["1m", "DPS for Last 1min"],
@@ -246,8 +245,8 @@
     },
     "tank": {
       "_": "Tank",
-      "damage": ["TakenD", "Damage taken"],
-      "heal": ["HealR", "Healing Received"],
+      "damage": ["TD", "Damage taken"],
+      "heal": ["HR", "Healing Received"],
       "parry": ["Parry", "Parry"],
       "block": ["Block", "Block"],
       "threat_delta": ["Th∆", "Threat Delta"]
@@ -256,20 +255,20 @@
       "_": "Heal",
       "per_second": ["HPS", "per Second"],
       "pct": ["H%", "Heal %"],
-      "total": ["H.Tot", "Total"],
-      "over": ["OvH%", "Overheal"],
-      "swing": ["Swing", "Swings"],
+      "total": ["H", "Total"],
+      "over": ["OH", "Overheal"],
+      "swing": ["S", "Swings"],
       "critical": ["HCrit", "Critical%"],
       "cure": ["Cure", "Cures"],
-      "max": ["MaxH", "Maxhit (w/o skillname)"],
-      "maxskill": ["MaxHS", "Maxhit (skillname only)"],
-      "maxhit": ["MaxHeal", "Maxhit"]
+      "max": ["MH", "Maxhit (w/o skillname)"],
+      "maxskill": ["MHS", "Maxhit (skillname only)"],
+      "maxhit": ["MHeal", "Maxhit"]
     },
     "etc": {
       "_": "Etc",
       "powerdrain": ["PDrn", "Powerdrain"],
       "powerheal": ["PHeal", "Powerheal"],
-      "death": ["Dead", "Deathcount"]
+      "death": ["D", "Deathcount"]
     }
   },
   "zone": {

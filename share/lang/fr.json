@@ -20,8 +20,7 @@
       "settings": "Paramètre",
       "reload": "Recharger l'overlay",
       "fullscreen": "Basculer en plein écran",
-      "screenshot": "Prendre une capture d'écran",
-      "donate": "Donnation"
+      "screenshot": "Prendre une capture d'écran"
     },
     "config": {
       "_": "Paramètre",
@@ -107,7 +106,12 @@
         "sortby": "Ordre",
         "available": "Colonnes disponnibles",
         "configured": "Colonnes actives",
-        "widths": [ 0, 1, 2, 3 ]
+        "widths": [
+          0,
+          1,
+          2,
+          3
+        ]
       },
       "i/e": {
         "_": "Import/Export",
@@ -145,15 +149,7 @@
         "hibiya": "Kuriyama Hibiya (히비야/ヒビヤ)",
         "support": "Support",
         "license": "Licence",
-        "icon-files": "Tout les fichiers dans share/img/class,",
-        "privacy": {
-          "_": "Politique Privée",
-          "list": [
-            "Si vous rencontrez un problème lors de l'utilisation de ce programme,<br />Les informations peuvent être envoyées au serveur.",
-            "La collection d'information se limite au minimum permettant d'identifier le problème:",
-            "* Version<br />* Dernière donnée de combat<br />* Autres informations collectées par ravenjs"
-          ]
-        }
+        "icon-files": "Tout les fichiers dans share/img/class,"
       }
     }
   },
@@ -217,59 +213,182 @@
   "col": {
     "i": {
       "_": "Info",
-      "icon": ["", "Class Icon"],
-      "class": ["Cls", "Classe/Job"],
-      "owner": ["Propriétaire", "Propriétaire"],
-      "name": ["Nom", "Nom"]
+      "icon": [
+        "",
+        "Class Icon"
+      ],
+      "class": [
+        "Cls",
+        "Classe/Job"
+      ],
+      "owner": [
+        "Propriétaire",
+        "Propriétaire"
+      ],
+      "name": [
+        "Nom",
+        "Nom"
+      ]
     },
     "deal": {
       "_": "DPS",
-      "per_second": ["DPS", "Par seconde"],
-      "pct": ["D%", "Deal %"],
-      "total": ["D.Tot", "Total"],
-      "failure": ["Fail", "Echec (Raté / Swing)"],
-      "accuracy": ["Acc.", "Précision (1 - Raté / Esquivé)"],
-      "swing": ["Toucher", "Touchés"],
-      "miss": ["Raté", "Ratés"],
-      "hitfail": ["HitF", "Hitfail"],
-      "critical": ["CH", "Critique %"],
-      "direct": ["DH", "Directe %"],
-      "crit_direct": ["!!!", "Critique Hit% (!!!)"],
-      "crittypes": ["D/!/!!!", "Direct/Critical/!!! Count"],
-      "max": ["MaxD", "Maxhit (w/o skillname)"],
-      "maxskill": ["MaxDS", "Maxhit (Nom de compétence seulement)"],
-      "maxhit": ["MaxDamage", "Maxhit"],
-      "last10": ["10s", "DPS des 10 dernières secondes"],
-      "last30": ["30s", "DPS des 30 dernières secondes"],
-      "last60": ["1m", "DPS de la dernière minute"],
-      "last180": ["3m", "DPS des 3 dernière minutes"]
+      "per_second": [
+        "DPS",
+        "Par seconde"
+      ],
+      "pct": [
+        "D%",
+        "Deal %"
+      ],
+      "total": [
+        "D.Tot",
+        "Total"
+      ],
+      "failure": [
+        "Fail",
+        "Echec (Raté / Swing)"
+      ],
+      "accuracy": [
+        "Acc.",
+        "Précision (1 - Raté / Esquivé)"
+      ],
+      "swing": [
+        "Toucher",
+        "Touchés"
+      ],
+      "miss": [
+        "Raté",
+        "Ratés"
+      ],
+      "hitfail": [
+        "HitF",
+        "Hitfail"
+      ],
+      "critical": [
+        "CH",
+        "Critique %"
+      ],
+      "direct": [
+        "DH",
+        "Directe %"
+      ],
+      "crit_direct": [
+        "!!!",
+        "Critique Hit% (!!!)"
+      ],
+      "crittypes": [
+        "D/!/!!!",
+        "Direct/Critical/!!! Count"
+      ],
+      "max": [
+        "MaxD",
+        "Maxhit (w/o skillname)"
+      ],
+      "maxskill": [
+        "MaxDS",
+        "Maxhit (Nom de compétence seulement)"
+      ],
+      "maxhit": [
+        "MaxDamage",
+        "Maxhit"
+      ],
+      "last10": [
+        "10s",
+        "DPS des 10 dernières secondes"
+      ],
+      "last30": [
+        "30s",
+        "DPS des 30 dernières secondes"
+      ],
+      "last60": [
+        "1m",
+        "DPS de la dernière minute"
+      ],
+      "last180": [
+        "3m",
+        "DPS des 3 dernière minutes"
+      ]
     },
     "tank": {
       "_": "Tank",
-      "damage": ["TakenD", "Dommage reçu"],
-      "heal": ["HealR", "Soin Reçu"],
-      "parry": ["Parrade", "Parrade"],
-      "block": ["Blockage", "Bloquer"],
-      "threat_delta": ["Th∆", "Menace"]
+      "damage": [
+        "TakenD",
+        "Dommage reçu"
+      ],
+      "heal": [
+        "HealR",
+        "Soin Reçu"
+      ],
+      "parry": [
+        "Parrade",
+        "Parrade"
+      ],
+      "block": [
+        "Blockage",
+        "Bloquer"
+      ],
+      "threat_delta": [
+        "Th∆",
+        "Menace"
+      ]
     },
     "heal": {
       "_": "Soin",
-      "per_second": ["HPS", "Par seconde"],
-      "pct": ["H%", "Soin %"],
-      "total": ["H.Tot", "Total"],
-      "over": ["OvH%", "Overheal"],
-      "swing": ["Esquive", "Esquives"],
-      "critical": ["HCrit", "Critique%"],
-      "cure": ["Cure", "Guérison"],
-      "max": ["MaxH", "Maxhit (w/o skillname)"],
-      "maxskill": ["MaxHS", "Maxhit (skillname only)"],
-      "maxhit": ["MaxHeal", "Maxhit"]
+      "per_second": [
+        "HPS",
+        "Par seconde"
+      ],
+      "pct": [
+        "H%",
+        "Soin %"
+      ],
+      "total": [
+        "H.Tot",
+        "Total"
+      ],
+      "over": [
+        "OvH%",
+        "Overheal"
+      ],
+      "swing": [
+        "Esquive",
+        "Esquives"
+      ],
+      "critical": [
+        "HCrit",
+        "Critique%"
+      ],
+      "cure": [
+        "Cure",
+        "Guérison"
+      ],
+      "max": [
+        "MaxH",
+        "Maxhit (w/o skillname)"
+      ],
+      "maxskill": [
+        "MaxHS",
+        "Maxhit (skillname only)"
+      ],
+      "maxhit": [
+        "MaxHeal",
+        "Maxhit"
+      ]
     },
     "etc": {
       "_": "Etc",
-      "powerdrain": ["PDrn", "Drain de pouvoir"],
-      "powerheal": ["PHeal", "Puissance de soin"],
-      "death": ["Mort", "Nombre de mort"]
+      "powerdrain": [
+        "PDrn",
+        "Drain de pouvoir"
+      ],
+      "powerheal": [
+        "PHeal",
+        "Puissance de soin"
+      ],
+      "death": [
+        "Mort",
+        "Nombre de mort"
+      ]
     }
   },
   "zone": {
@@ -285,8 +404,6 @@
     }
   },
   "skill": {
-    "alias": {
-
-    }
+    "alias": {}
   }
 }
