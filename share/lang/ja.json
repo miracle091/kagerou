@@ -20,7 +20,8 @@
       "settings": "設定",
       "reload": "リロード",
       "fullscreen": "フルスクリーン",
-      "screenshot": "スクリーンショット"
+      "screenshot": "スクリーンショット",
+      "donate": "寄付"
     },
     "config": {
       "_": "設定",
@@ -106,12 +107,7 @@
         "sortby": "ソート基準",
         "available": "使える項目",
         "configured": "設定された項目",
-        "widths": [
-          0,
-          "オフ",
-          "2人ずつ",
-          "3人ずつ"
-        ]
+        "widths": [ 0, "オフ", "2人ずつ", "3人ずつ" ]
       },
       "i/e": {
         "_": "設定の共有",
@@ -131,6 +127,7 @@
         "others": {
           "_": "その他",
           "skill-aliases-help": "'The Forbidden Chakra'のような長いスキル名に略称を使用します。",
+          "switch-raid-help": "Automatically switches to the appropriate 24-player mode tab depending on the number of players currently in combat.",
           "filter": "フィルター",
           "filter-help": [
             "FFXIV_Pluginが敵味方の識別がまともにできないので敵を表示しないようにします。",
@@ -145,11 +142,19 @@
       "info": {
         "_": "情報",
         "created-by": "作者",
-        "servers": "<del>Odin</del> Chocobo / Tonberry",
-        "hibiya": "히비야 (Kuriyama Hibiya)",
+        "servers": "Carbuncle@KR Chocobo@KR",
+        "hibiya": "クリヤマ・ヒビヤ",
         "support": "サポート",
         "license": "ライセンス",
-        "icon-files": "share/img/class内のすべてのファイルに対し、"
+        "icon-files": "share/img/class内のすべてのファイルに対し、",
+        "privacy": {
+          "_": "プライバシーポリシー",
+          "list": [
+            "このプログラムが動作中に問題が発生した時に、<br/>解決のための情報がサーバーに送信されることがあります。",
+            "問題を識別するための最小限の情報に制限した上で収集されます。:",
+            "* プログラムのバージョン<br />* 最後のエンカウンターデータ<br />* ravenjsが収集するその他の情報"
+          ]
+        }
       }
     }
   },
@@ -207,188 +212,66 @@
       "myname": "名前",
       "use_short_name": "名前をイニシャルで表示",
       "use_skill_aliases": "スキル名の略称を使用",
+      "switch_raid_tab": "24 mode auto switch tab",
       "use_tailing_pct": "割合値の後ろに％記号を表示"
     }
   },
   "col": {
     "i": {
       "_": "情報",
-      "icon": [
-        " ",
-        "クラスアイコン"
-      ],
-      "class": [
-        "Job",
-        "クラス・"
-      ],
-      "owner": [
-        "Owner",
-        "オーナー"
-      ],
-      "name": [
-        "名前",
-        "名前"
-      ]
+      "icon": [" ", "クラスアイコン"],
+      "class": ["Job", "クラス・"],
+      "owner": ["Owner", "オーナー"],
+      "name": ["名前", "名前"]
     },
     "deal": {
       "_": "DPS",
-      "per_second": [
-        "DPS",
-        "DPS"
-      ],
-      "pct": [
-        "D%",
-        "寄与率"
-      ],
-      "total": [
-        "D合",
-        "合計"
-      ],
-      "failure": [
-        "Miss%",
-        "ミスの割合"
-      ],
-      "accuracy": [
-        "Acc%",
-        "命中率 (1 - ミスの割合)"
-      ],
-      "swing": [
-        "Swing",
-        "打撃回数"
-      ],
-      "miss": [
-        "Miss",
-        "外れた回数"
-      ],
-      "hitfail": [
-        "Hitfail",
-        "Hitfail回数"
-      ],
-      "critical": [
-        "Crit",
-        "Critical%"
-      ],
-      "direct": [
-        "Direct",
-        "*Direct Hit%"
-      ],
-      "crit_direct": [
-        "!!!",
-        "*Critical Direct Hit% (!!!)"
-      ],
-      "crittypes": [
-        "D/!/!!!",
-        "Critical回数まとめ (D/!/!!!)"
-      ],
-      "max": [
-        "MaxD",
-        "Maxhit (スキル名を除く)"
-      ],
-      "maxskill": [
-        "MaxDスキル",
-        "Maxhitのスキル名"
-      ],
-      "maxhit": [
-        "MaxDamage",
-        "Max"
-      ],
-      "last10": [
-        "10s",
-        "直近10秒DPS"
-      ],
-      "last30": [
-        "30s",
-        "直近30秒DPS"
-      ],
-      "last60": [
-        "1分",
-        "直近1分DPS"
-      ],
-      "last180": [
-        "3分",
-        "直近3分DPS (β)"
-      ]
+      "per_second": ["DPS", "DPS"],
+      "pct": ["D%", "寄与率"],
+      "total": ["D合", "合計"],
+      "failure": ["Miss%", "ミスの割合"],
+      "accuracy": ["Acc%", "命中率 (1 - ミスの割合)"],
+      "swing": ["Swing", "打撃回数"],
+      "miss": ["Miss", "外れた回数"],
+      "hitfail": ["Hitfail", "Hitfail回数"],
+      "critical": ["Crit", "Critical%"],
+      "direct": ["Direct", "*Direct Hit%"],
+      "crit_direct": ["!!!", "*Critical Direct Hit% (!!!)"],
+      "crittypes": ["D/!/!!!", "Critical回数まとめ (D/!/!!!)"],
+      "max": ["MaxD", "Maxhit (スキル名を除く)"],
+      "maxskill": ["MaxDスキル", "Maxhitのスキル名"],
+      "maxhit": ["MaxDamage", "Max"],
+      "last10": ["10s", "直近10秒DPS"],
+      "last30": ["30s", "直近30秒DPS"],
+      "last60": ["1分", "直近1分DPS"],
+      "last180": ["3分", "直近3分DPS (β)"]
     },
     "tank": {
       "_": "Tank",
-      "damage": [
-        "TakenD",
-        "被ダメージ量"
-      ],
-      "heal": [
-        "TakenH",
-        "被ヒール量"
-      ],
-      "parry": [
-        "Parry",
-        "Parry"
-      ],
-      "block": [
-        "Block",
-        "Block"
-      ],
-      "threat_delta": [
-        "Th∆",
-        "スレットデルタ(∆)"
-      ]
+      "damage": ["TakenD", "被ダメージ量"],
+      "heal": ["TakenH", "被ヒール量"],
+      "parry": ["Parry", "Parry"],
+      "block": ["Block", "Block"],
+      "threat_delta": ["Th∆", "スレットデルタ(∆)"]
     },
     "heal": {
       "_": "Heal",
-      "per_second": [
-        "HPS",
-        "HPS"
-      ],
-      "pct": [
-        "H%",
-        "寄与率"
-      ],
-      "total": [
-        "H合",
-        "合計"
-      ],
-      "over": [
-        "Ovr+",
-        "オーバーヒール"
-      ],
-      "swing": [
-        "Swing",
-        "詠唱回数"
-      ],
-      "critical": [
-        "HCrit",
-        "Critical%"
-      ],
-      "cure": [
-        "Cure",
-        "治療 (デバフ解除)"
-      ],
-      "max": [
-        "MaxH",
-        "Maxhit (スキル名を除く)"
-      ],
-      "maxskill": [
-        "MaxHスキル",
-        "Maxhitのスキル名"
-      ],
-      "maxhit": [
-        "MaxHeal",
-        "Max"
-      ]
+      "per_second": ["HPS", "HPS"],
+      "pct": ["H%", "寄与率"],
+      "total": ["H合", "合計"],
+      "over": ["Ovr+", "オーバーヒール"],
+      "swing": ["Swing", "詠唱回数"],
+      "critical": ["HCrit", "Critical%"],
+      "cure": ["Cure", "治療 (デバフ解除)"],
+      "max": ["MaxH", "Maxhit (スキル名を除く)"],
+      "maxskill": ["MaxHスキル", "Maxhitのスキル名"],
+      "maxhit": ["MaxHeal", "Max"]
     },
     "etc": {
       "_": "その他",
-      "powerdrain": [
-        "P.drn",
-        "被吸収量"
-      ],
-      "powerheal": [
-        "変換",
-        "吸収量"
-      ],
-      "death": [
-        "死",
-        "死亡回数"
-      ]
+      "powerdrain": ["P.drn", "被吸収量"],
+      "powerheal": ["変換", "吸収量"],
+      "death": ["死", "死亡回数"]
     }
   },
   "zone": {
@@ -404,6 +287,8 @@
     }
   },
   "skill": {
-    "alias": {}
+    "alias": {
+
+    }
   }
 }

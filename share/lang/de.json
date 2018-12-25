@@ -20,7 +20,8 @@
       "settings": "Einstellungen",
       "reload": "Overlay aktualisieren",
       "fullscreen": "Vollbildmodus",
-      "screenshot": "Bildschirmfoto"
+      "screenshot": "Bildschirmfoto",
+      "donate": "Spenden"
     },
     "config": {
       "_": "Einstellungen",
@@ -106,12 +107,7 @@
         "sortby": "Sortieren nach",
         "available": "Verfügbare Kategorien",
         "configured": "Ausgewählte Kategorien",
-        "widths": [
-          0,
-          1,
-          2,
-          3
-        ]
+        "widths": [ 0, 1, 2, 3 ]
       },
       "i/e": {
         "_": "Importieren/Exportieren",
@@ -131,6 +127,7 @@
         "others": {
           "_": "Sonstiges",
           "skill-aliases-help": "Benutze Abkürzungen für lange Namen von Fähigkeiten",
+          "switch-raid-help": "Automatically switches to the appropriate 24-player mode tab depending on the number of players currently in combat.",
           "filter": "Filter",
           "filter-help": [
             "FFXIV_Plugin unterscheidet nicht zwischen Gegner und Mitspieler. Die folgenden Optionen vermeiden, dass die entsprechenden Kombatanten nicht im Overlay gelistet werden",
@@ -145,11 +142,19 @@
       "info": {
         "_": "Über",
         "created-by": "Created by",
-        "servers": "<del>Odin</del> Chocobo...@KR / Tonberry",
-        "hibiya": "Kuriyama Hibiya (히비야/ヒビヤ)",
+        "servers": "Carbuncle@KR / Chocobo@KR",
+        "hibiya": "kuriyama hibiya",
         "support": "Support",
         "license": "License",
-        "icon-files": "All files under share/img/class,"
+        "icon-files": "All files under share/img/class,",
+        "privacy": {
+          "_": "Privacy Policy",
+          "list": [
+            "If a problem occurs during operation of this program,<br />information for troubleshooting can be sent to the server.",
+            "Collected information is limited to a minimum amount to identify the problem:",
+            "* Program Version<br />* Last Combatant Data<br />* Other information collected by ravenjs"
+          ]
+        }
       }
     }
   },
@@ -207,188 +212,66 @@
       "myname": "Mein Name",
       "use_short_name": "Darstellung von Spielernamen",
       "use_skill_aliases": "Benutze Alias für Fähigkeitsnamen",
+      "switch_raid_tab": "24 mode auto switch tab",
       "use_tailing_pct": "*Display % after percentage value"
     }
   },
   "col": {
     "i": {
       "_": "Info",
-      "icon": [
-        " ",
-        "Class Icon"
-      ],
-      "class": [
-        "Job",
-        "Klasse/Job"
-      ],
-      "owner": [
-        "Besitzer",
-        "Besitzer"
-      ],
-      "name": [
-        "Name",
-        "Name"
-      ]
+      "icon": [" ", "Class Icon"],
+      "class": ["Job", "Klasse/Job"],
+      "owner": ["Besitzer", "Besitzer"],
+      "name": ["Name", "Name"]
     },
     "deal": {
       "_": "DPS",
-      "per_second": [
-        "DPS",
-        "Schaden pro Sekunde"
-      ],
-      "pct": [
-        "D%",
-        "% des Gesamtschadens"
-      ],
-      "total": [
-        "D.Ges.",
-        "Gesamtschaden"
-      ],
-      "failure": [
-        "Fehlschlag",
-        "Fehlschlag (Verfehlt / Angriffe)"
-      ],
-      "accuracy": [
-        "Acc.",
-        "Genauigkeit (1 - Verfehlt / Angriffe)"
-      ],
-      "swing": [
-        "Angriffe",
-        "Angriffe"
-      ],
-      "miss": [
-        "Verfehlt",
-        "Verfehlt"
-      ],
-      "hitfail": [
-        "HitF",
-        "Hitfail"
-      ],
-      "critical": [
-        "CH",
-        "Kritische Trefferchance"
-      ],
-      "direct": [
-        "DH",
-        "*Direct Hit%"
-      ],
-      "crit_direct": [
-        "!!!",
-        "*Critical Direct Hit% (!!!)"
-      ],
-      "crittypes": [
-        "D/!/!!!",
-        "*Direct/Critical/!!! Count"
-      ],
-      "max": [
-        "MaxD",
-        "Maximaler Schaden (ohne Fähigkeitsname)"
-      ],
-      "maxskill": [
-        "MaxDS",
-        "Maximaler Schaden Fähigkeitsname"
-      ],
-      "maxhit": [
-        "MaxSchaden",
-        "Maximaler Schaden (mit Fähigkeitsname)"
-      ],
-      "last10": [
-        "10s",
-        "DPS der letzten 10s"
-      ],
-      "last30": [
-        "30s",
-        "DPS der letzten 30s"
-      ],
-      "last60": [
-        "1m",
-        "DPS der letzten 1min"
-      ],
-      "last180": [
-        "3m",
-        "DPS der letzten 3min (Beta)"
-      ]
+      "per_second": ["DPS", "Schaden pro Sekunde"],
+      "pct": ["D%", "% des Gesamtschadens"],
+      "total": ["D.Ges.", "Gesamtschaden"],
+      "failure": ["Fehlschlag", "Fehlschlag (Verfehlt / Angriffe)"],
+      "accuracy": ["Acc.", "Genauigkeit (1 - Verfehlt / Angriffe)"],
+      "swing": ["Angriffe", "Angriffe"],
+      "miss": ["Verfehlt", "Verfehlt"],
+      "hitfail": ["HitF", "Hitfail"],
+      "critical": ["CH", "Kritische Trefferchance"],
+      "direct": ["DH", "*Direct Hit%"],
+      "crit_direct": ["!!!", "*Critical Direct Hit% (!!!)"],
+      "crittypes": ["D/!/!!!", "*Direct/Critical/!!! Count"],
+      "max": ["MaxD", "Maximaler Schaden (ohne Fähigkeitsname)"],
+      "maxskill": ["MaxDS", "Maximaler Schaden Fähigkeitsname"],
+      "maxhit": ["MaxSchaden", "Maximaler Schaden (mit Fähigkeitsname)"],
+      "last10": ["10s", "DPS der letzten 10s"],
+      "last30": ["30s", "DPS der letzten 30s"],
+      "last60": ["1m", "DPS der letzten 1min"],
+      "last180": ["3m", "DPS der letzten 3min (Beta)"]
     },
     "tank": {
       "_": "Tank",
-      "damage": [
-        "Erl.Schad.",
-        "Erlittener Schaden"
-      ],
-      "heal": [
-        "Geheilt",
-        "Erhaltene Heilung"
-      ],
-      "parry": [
-        "Parade",
-        "Pariert"
-      ],
-      "block": [
-        "Block",
-        "Geblockt"
-      ],
-      "threat_delta": [
-        "Th∆",
-        "'Threat' Delta"
-      ]
+      "damage": ["Erl.Schad.", "Erlittener Schaden"],
+      "heal": ["Geheilt", "Erhaltene Heilung"],
+      "parry": ["Parade", "Pariert"],
+      "block": ["Block", "Geblockt"],
+      "threat_delta": ["Th∆", "'Threat' Delta"]
     },
     "heal": {
       "_": "Heilung",
-      "per_second": [
-        "HPS",
-        "Heilung pro Sekunde"
-      ],
-      "pct": [
-        "H%",
-        "% der Gesamtheilung"
-      ],
-      "total": [
-        "H.Ges.",
-        "Gesamtheilung"
-      ],
-      "over": [
-        "OvrH",
-        "Overheal"
-      ],
-      "swing": [
-        "Heilungen",
-        "Anzahl der Heilungen"
-      ],
-      "critical": [
-        "HCrit",
-        "Kritischer Trefferchance"
-      ],
-      "cure": [
-        "Reinigung",
-        "Anzahl der Reinigungen"
-      ],
-      "max": [
-        "MaxH",
-        "Maximaler Schaden (ohne Fähigkeitsname)"
-      ],
-      "maxskill": [
-        "MaxHS",
-        "Maximaler Schaden Fähigkeitsname"
-      ],
-      "maxhit": [
-        "MaxHeal",
-        "Maximaler Schaden (mit Fähigkeitsname)"
-      ]
+      "per_second": ["HPS", "Heilung pro Sekunde"],
+      "pct": ["H%", "% der Gesamtheilung"],
+      "total": ["H.Ges.", "Gesamtheilung"],
+      "over": ["OvrH", "Overheal"],
+      "swing": ["Heilungen", "Anzahl der Heilungen"],
+      "critical": ["HCrit", "Kritischer Trefferchance"],
+      "cure": ["Reinigung", "Anzahl der Reinigungen"],
+      "max": ["MaxH", "Maximaler Schaden (ohne Fähigkeitsname)"],
+      "maxskill": ["MaxHS", "Maximaler Schaden Fähigkeitsname"],
+      "maxhit": ["MaxHeal", "Maximaler Schaden (mit Fähigkeitsname)"]
     },
     "etc": {
       "_": "Etc",
-      "powerdrain": [
-        "PDrn",
-        "Powerdrain"
-      ],
-      "powerheal": [
-        "PHeal",
-        "Powerheal"
-      ],
-      "death": [
-        "Tode",
-        "Anzahl der Tode"
-      ]
+      "powerdrain": ["PDrn", "Powerdrain"],
+      "powerheal": ["PHeal", "Powerheal"],
+      "death": ["Tode", "Anzahl der Tode"]
     }
   },
   "zone": {
@@ -404,7 +287,9 @@
     }
   },
   "skill": {
-    "alias": {}
+    "alias": {
+
+    }
   },
   "_author": "u/tollekarte666"
 }

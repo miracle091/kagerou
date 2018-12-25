@@ -20,7 +20,8 @@
       "settings": "설정",
       "reload": "새로고침",
       "fullscreen": "전체 화면 전환",
-      "screenshot": "스크린샷"
+      "screenshot": "스크린샷",
+      "donate": "기부"
     },
     "config": {
       "_": "설정",
@@ -106,12 +107,7 @@
         "sortby": "정렬 기준",
         "available": "사용할 수 있는 항목",
         "configured": "설정된 항목 (권장: 이름 제외 6개까지)",
-        "widths": [
-          0,
-          "끔",
-          "2명씩",
-          "3명씩"
-        ]
+        "widths": [ 0, "끔", "2명씩", "3명씩" ]
       },
       "i/e": {
         "_": "들여오기/내보내기",
@@ -131,6 +127,7 @@
         "others": {
           "_": "기타",
           "skill-aliases-help": "'The Forbidden Chakra'와 같은 긴 스킬 이름에 대해 약칭을 사용합니다.",
+          "switch-raid-help": "현재 전투의 인원수에 따라 알맞은 24인 모드의 탭으로 자동 전환합니다.",
           "filter": "필터",
           "filter-help": [
             "FFXIV_Plugin이 피아식별조차 제대로 못 하는 관계로, 어떻게든 적을 표시하지 않도록 시도합니다.",
@@ -145,11 +142,19 @@
       "info": {
         "_": "정보",
         "created-by": "만든 사람",
-        "servers": "<del>오딘</del> 초코보 / Tonberry",
-        "hibiya": "히비야 (Kuriyama Hibiya)",
+        "servers": "카벙클 / 초코보",
+        "hibiya": "히비야 (kuriyama hibiya)",
         "support": "지원 / 문제 해결",
         "license": "라이센스",
-        "icon-files": "share/img/class 안의 모든 파일에 대하여,"
+        "icon-files": "share/img/class 안의 모든 파일에 대하여,",
+        "privacy": {
+          "_": "개인정보",
+          "list": [
+            "이 프로그램이 작동하는 중 문제가 발생할 시, 문제 해결을 위한 정보가<br />서버로 전송될 수 있습니다.",
+            "수집되는 정보는 문제를 식별하기 위한 최소한의 정보로 제한됩니다:",
+            "* 프로그램 버전<br />* 마지막 전투 데이터<br />* ravenjs가 수집하는 기타 정보"
+          ]
+        }
       }
     }
   },
@@ -207,188 +212,66 @@
       "myname": "내 이름",
       "use_short_name": "이름을 이니셜로 표시 (글로벌 서버용)",
       "use_skill_aliases": "스킬 이름 약칭 사용 (글로벌 서버용)",
+      "switch_raid_tab": "24인 모드 탭 자동 전환",
       "use_tailing_pct": "비율 값 뒤에 % 기호를 표시"
     }
   },
   "col": {
     "i": {
       "_": "정보",
-      "icon": [
-        " ",
-        "직업 아이콘"
-      ],
-      "class": [
-        "직업",
-        "클래스/잡"
-      ],
-      "owner": [
-        "주인",
-        "주인"
-      ],
-      "name": [
-        "이름",
-        "이름"
-      ]
+      "icon": [" ", "직업 아이콘"],
+      "class": ["직업", "클래스/잡"],
+      "owner": ["주인", "주인"],
+      "name": ["이름", "이름"]
     },
     "deal": {
       "_": "딜",
-      "per_second": [
-        "DPS",
-        "DPS"
-      ],
-      "pct": [
-        "딜%",
-        "기여율"
-      ],
-      "total": [
-        "딜 합계",
-        "합계"
-      ],
-      "failure": [
-        "실패",
-        "실패율 (빗나감 / 타격)"
-      ],
-      "accuracy": [
-        "명중",
-        "명중율 (1 - 빗나감 / 타격)"
-      ],
-      "swing": [
-        "타격",
-        "타격 횟수"
-      ],
-      "miss": [
-        "빗나감",
-        "빗나간 횟수"
-      ],
-      "hitfail": [
-        "막힘",
-        "막힌 횟수"
-      ],
-      "critical": [
-        "극대",
-        "극대화 비율"
-      ],
-      "direct": [
-        "DH%",
-        "Direct Hit % (4.x)"
-      ],
-      "crit_direct": [
-        "!!!",
-        "Critical Direct Hit % (!!!, 4.x)"
-      ],
-      "crittypes": [
-        "D/!/!!!",
-        "극대 모아보기 (D/!/!!!, 4.x)"
-      ],
-      "max": [
-        "MaxD",
-        "Maxhit (스킬명 제외)"
-      ],
-      "maxskill": [
-        "MaxD 스킬",
-        "Maxhit (스킬명만)"
-      ],
-      "maxhit": [
-        "MaxDamage",
-        "Maxhit"
-      ],
-      "last10": [
-        "10초",
-        "최근 10초 DPS"
-      ],
-      "last30": [
-        "30초",
-        "최근 30초 DPS"
-      ],
-      "last60": [
-        "1분",
-        "최근 1분 DPS"
-      ],
-      "last180": [
-        "3분",
-        "최근 3분 DPS (베타)"
-      ]
+      "per_second": ["DPS", "DPS"],
+      "pct": ["딜%", "기여율"],
+      "total": ["딜 합계", "합계"],
+      "failure": ["실패", "실패율 (빗나감 / 타격)"],
+      "accuracy": ["명중", "명중율 (1 - 빗나감 / 타격)"],
+      "swing": ["타격", "타격 횟수"],
+      "miss": ["빗나감", "빗나간 횟수"],
+      "hitfail": ["막힘", "막힌 횟수"],
+      "critical": ["극대", "극대화 비율"],
+      "direct": ["DH%", "Direct Hit % (4.x)"],
+      "crit_direct": ["!!!", "Critical Direct Hit % (!!!, 4.x)"],
+      "crittypes": ["D/!/!!!", "극대 모아보기 (D/!/!!!, 4.x)"],
+      "max": ["MaxD", "Maxhit (스킬명 제외)"],
+      "maxskill": ["MaxD 스킬", "Maxhit (스킬명만)"],
+      "maxhit": ["MaxDamage", "Maxhit"],
+      "last10": ["10초", "최근 10초 DPS"],
+      "last30": ["30초", "최근 30초 DPS"],
+      "last60": ["1분", "최근 1분 DPS"],
+      "last180": ["3분", "최근 3분 DPS (베타)"]
     },
     "tank": {
       "_": "탱",
-      "damage": [
-        "받은 뎀",
-        "받은 데미지"
-      ],
-      "heal": [
-        "받은 힐",
-        "받은 힐"
-      ],
-      "parry": [
-        "받넘",
-        "받아넘기기"
-      ],
-      "block": [
-        "회피",
-        "회피"
-      ],
-      "threat_delta": [
-        "Th∆",
-        "Threat Delta 값"
-      ]
+      "damage": ["받은 뎀", "받은 데미지"],
+      "heal": ["받은 힐", "받은 힐"],
+      "parry": ["받넘", "받아넘기기"],
+      "block": ["회피", "회피"],
+      "threat_delta": ["Th∆", "Threat Delta 값"]
     },
     "heal": {
       "_": "힐",
-      "per_second": [
-        "HPS",
-        "HPS"
-      ],
-      "pct": [
-        "힐%",
-        "기여율"
-      ],
-      "total": [
-        "힐 합계",
-        "합계"
-      ],
-      "over": [
-        "Ovr+",
-        "오버힐"
-      ],
-      "swing": [
-        "타격",
-        "타격 횟수"
-      ],
-      "critical": [
-        "+극대",
-        "극대화 비율"
-      ],
-      "cure": [
-        "치료",
-        "치료 (디버프 해제)"
-      ],
-      "max": [
-        "MaxH",
-        "Maxhit (스킬명 제외)"
-      ],
-      "maxskill": [
-        "MaxH 스킬",
-        "Maxhit (스킬명만)"
-      ],
-      "maxhit": [
-        "MaxHeal",
-        "Maxhit"
-      ]
+      "per_second": ["HPS", "HPS"],
+      "pct": ["힐%", "기여율"],
+      "total": ["힐 합계", "합계"],
+      "over": ["Ovr+", "오버힐"],
+      "swing": ["타격", "타격 횟수"],
+      "critical": ["+극대", "극대화 비율"],
+      "cure": ["치료", "치료 (디버프 해제)"],
+      "max": ["MaxH", "Maxhit (스킬명 제외)"],
+      "maxskill": ["MaxH 스킬", "Maxhit (스킬명만)"],
+      "maxhit": ["MaxHeal", "Maxhit"]
     },
     "etc": {
       "_": "기타",
-      "powerdrain": [
-        "P.drn",
-        "Powerdrain"
-      ],
-      "powerheal": [
-        "변환",
-        "자원 변환"
-      ],
-      "death": [
-        "사망",
-        "데스카운트"
-      ]
+      "powerdrain": ["P.drn", "Powerdrain"],
+      "powerheal": ["변환", "자원 변환"],
+      "death": ["사망", "데스카운트"]
     }
   },
   "zone": {
