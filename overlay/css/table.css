@@ -232,7 +232,7 @@ main > ul {
   height: 2.25rem !important;
   position: absolute;
   left: 0.25rem;
-  bottom: -0.5rem;
+  bottom: 0.1rem;
 }
 #header, footer {
   display: flex;
